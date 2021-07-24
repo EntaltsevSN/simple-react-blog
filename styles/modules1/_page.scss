@@ -1,0 +1,22 @@
+.page {
+  @extend .box;
+
+  &__header,
+  &__content {
+    padding: $padding_medium;
+  }
+
+  &__header {
+    border-bottom: 1px solid $lightgray_color;
+  }
+
+  &__title {
+    &--no-margin {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    padding-bottom: 1px;
+  }
+}

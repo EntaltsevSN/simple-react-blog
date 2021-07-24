@@ -1,0 +1,5 @@
+export const GET_BLOGS = 'GET_BLOGS'
+export const ADD_BLOG = 'ADD_BLOG'
+export const ADD_BLOG_COMMENT = 'ADD_BLOG_COMMENT'
+export const UPDATE_BLOG = 'UPDATE_BLOG'
+export const DELETE_BLOG = 'DELETE_BLOG'

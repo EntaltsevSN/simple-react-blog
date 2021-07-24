@@ -1,0 +1,332 @@
+.form {
+  width: 100%;
+  font-family: 'Rubik';
+  font-size: 14px;
+
+  &--search {
+    position: relative;
+  }
+
+  &--comments {
+    margin-bottom: $padding_medium;
+    border-bottom: 1px solid $lightgray_color;
+    padding-bottom: $padding_medium;
+  }
+  
+  strong {
+    font-weight: 700;
+  }
+  
+  i {
+    font-style: italic;
+  }
+
+  &__group {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    align-items: center;
+    margin-bottom: $padding_small;
+
+    label {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
+    &--inline,
+    &--cart {
+      margin-bottom: 0;
+    }
+
+    &--cart {
+      margin: 0 ($padding_small / 2)
+    }
+
+    &--no-margin {
+      margin-bottom: 0;
+    }
+
+    &--margin-top {
+      margin: $padding_small 0 0;
+    }
+
+    &--margin-top {
+      margin: 0 0 $padding_small;
+    }
+    
+    .react-dadata.react-dadata__container {
+      width: 100%;
+    }
+
+    &--editor {
+      & > section {
+        width: 100%;
+      }
+    }
+
+    .ck-editor {
+
+      width: 100%;
+    }
+
+    &--flex {
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
+    .rc-checkbox-disabled {
+      background-color: transparentize(rgb(239, 239, 239), .3);
+    }
+  }
+
+  &__advice {
+    margin-left: $padding_medium;
+    position: relative;
+    display: inline-block;
+  }
+
+  &__question {
+    fill: $primary_color_darkblue;
+    font-size: ($font_size_h2 + $font_size_h3) / 2;
+    
+    &:hover + * { 
+      opacity: 1; 
+      transition: all ease-out .3s;
+    }
+  }
+
+  &__recommendation { 
+    min-width: $padding_medium * 8;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    z-index: 5;
+    border: 1px solid $primary_color_darkblue;
+    border-radius: $border_radius;
+    padding: $padding_small;
+    background-color: #fff;
+    opacity: 0;
+    transition: all ease-out .3s;
+    box-shadow: $box_shadow, $box_shadow;
+    pointer-events: none;
+  }
+
+  &__explanation {
+    margin: 0;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: $padding_small / 1.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+
+    * {
+      fill: $text_color;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &__file {
+    display: none;
+  }
+
+  &__input,
+  &__textarea,
+  .rc-checkbox {
+    &,
+    &.react-dadata__input {
+      padding: ($padding_small / 2) ($padding_small / 1.5);
+      border-radius: $padding_small / 4;
+      border: 1px solid $lightgray_color;
+      font: 400 $font_size 'Rubik';
+      outline: none;
+      width: 100%;
+      position: relative;
+    }
+
+    &:focus {
+      border-color: $gray_color;
+    }
+
+    &--with-margin {
+      margin-bottom: $padding_small;
+    }
+
+    &--incorrect {
+      &, &:focus {
+        border-color: $primary_color_red;
+      }
+    }
+
+    &--correct {
+      &, &:focus {
+        border-color: $primary_color_green;
+      }
+    }
+
+    &--file {
+      width: auto;
+      display: inline-flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      padding: 0 0 0 $padding_small;
+      margin: 0;
+    }
+
+    &--cart {
+      display: inline-block;
+      width: 100%;
+      padding: ($padding_small / 2);
+      border: 0;
+      border-bottom: 2px solid $lightgray_color;
+      border-radius: 0;
+      text-align: center;
+    }
+
+    &[readonly] {
+      background-color: transparentize(rgb(239, 239, 239), .3);
+    }
+  }
+
+  &__checked-icon {
+    position: absolute;
+    font-size: $font_size * 1.25;
+    left: 4px;
+    top: 3px;
+    transition: opacity ease-out .2s;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .rc-checkbox {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      visibility: hidden;
+    }
+
+    &-checked {
+      & + .form__checked-icon {
+        transition: opacity ease-out .2s;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__span {
+    display: inline-block;
+    margin-left: $padding_small / 2;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    max-width: $padding_big * 20;
+    border-radius: $border_radius;
+    margin-bottom: $padding_small;
+    vertical-align: bottom;
+
+    &--small {
+      max-width: 200px;
+      border-radius: 50%;
+    }
+  }
+
+  &__span {
+    padding-right: $padding_small;
+  }
+
+  &__label {
+    width: 100%;
+    padding: ($padding_small / 3) 0;
+    color: $primary_color_red;
+  }
+
+  &__submit {
+    margin-right: $padding_small;
+  }
+
+  &__error {
+    color: $primary_color_red;
+  }
+
+  &__select {
+    min-width: 200px;
+
+    [class*=indicatorSeparator] {
+      display: none;
+    }
+  }
+
+  &__iframe {
+    margin-bottom: $padding_small / 1.5;
+  }
+
+  &__inline,
+  &__switcher {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link {
+    &--neighbour {
+      margin-left: $padding_small;
+    }
+  }
+
+  &__text {
+    margin-left: $padding_small / 2;
+  }
+
+  &__icon {
+    position: relative;
+    top: 2px;
+  }
+
+  &__flex {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: $padding_small;
+    width: 100%;
+  }
+
+  .reactEasyCrop_Container {
+    height: $padding_big * 10;
+    position: relative;
+    width: auto;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}

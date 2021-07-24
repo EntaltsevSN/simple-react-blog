@@ -1,0 +1,9 @@
+.body {
+  &__bottom {
+    text-align: right;
+    svg {
+      position: relative;
+      top: 7px;
+    }
+  }
+}

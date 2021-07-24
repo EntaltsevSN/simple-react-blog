@@ -1,0 +1,16 @@
+.social {
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-left: $padding_medium;
+  }
+
+  &__icon {
+    height: 20px;
+    width: auto;
+  }
+}

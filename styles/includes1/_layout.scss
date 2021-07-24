@@ -1,0 +1,10 @@
+.layout {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  &--loader {
+    align-items: center;
+    justify-content: center;
+  }
+}

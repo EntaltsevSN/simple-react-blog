@@ -1,0 +1,20 @@
+.slick-slide {  
+  & > div {
+    margin-bottom: -4px;
+    outline: none;
+    //text-align: center;
+  }
+}
+
+.slick-prev {
+  left: 16px;
+}
+
+.slick-next {
+  right: 16px;
+}
+
+.slick-slider [aria-disabled=false] {
+  opacity: .5;
+  pointer-events: none;
+}

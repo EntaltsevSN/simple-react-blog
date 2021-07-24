@@ -1,0 +1,183 @@
+blog
+  date_created
+  date_updated
+  description
+  id
+  image
+  is_hot
+  is_published
+  title
+  text
+
+blog_likes
+  date
+  id
+  post_id
+  user_id
+
+comments
+  date
+  id
+  parent_id
+  text
+  user_id
+
+comments_likes
+  date
+  id
+  user_id
+
+comments_restrictions
+  date_lock
+  date_unlock
+  description
+  id
+  moderator_id
+  restriction_days
+  user_id
+
+faq
+  answer
+  date
+  id
+  question
+  user_id
+
+files
+  date
+  id
+  file
+  title
+  user_id
+
+goals
+  date_created
+  date_updated
+  description
+  goal
+  id
+  image
+  title
+  user_id
+  text
+
+links
+  date
+  id
+  link
+  title
+  user_id
+
+news
+  date_created
+  date_updated
+  description
+  id
+  image
+  is_hot
+  is_members_only
+  is_published
+  title
+  text
+
+news_likes
+  date
+  id
+  post_id
+  user_id
+
+pages
+  date
+  id
+  title
+  text
+
+projects
+  category
+  date
+  date_finish
+  date_second_chance
+  date_start
+  description
+  goal
+  id
+  image
+  is_preorder
+  status
+  text
+  title
+  video
+
+projects_categories
+  id
+  slug
+  title
+
+projects_members
+  date_created
+  funding_sum
+  id
+  project_id
+  user_id
+
+projects_template 
+  image_bottom
+  image_left
+  image_right
+  image_top
+  project_id
+  template
+
+requests
+  comment
+  date
+  id
+  manager_id
+  requester_id
+
+rewards
+  available_limit
+  date
+  description
+  discount
+  id
+  image
+  is_addon
+  is_digital
+  is_second_chance
+  member_limit
+  order_index
+  price
+  price_second_chance
+  status
+  text
+  title
+
+users
+  birthday
+  date_created
+  description
+  email
+  first_name
+  image
+  is_policy_accepted
+  last_name
+  phone
+  role
+  second_name
+
+users_delivery
+  city
+  country
+  flat
+  house
+  id
+  isPrivateHouse
+  lastName
+  name
+  phone
+  region
+  secondName
+  street
+  user_id
+  zip

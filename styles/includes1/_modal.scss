@@ -1,0 +1,57 @@
+.modal {
+  @extend .box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: $padding_big * 12;
+  
+  & + .overlay {
+    background-color: rgba(0, 0, 0, .30);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transition: all ease-out .3s;
+  }
+
+  &__header {
+    padding: $padding_medium;
+    border-bottom: 1px solid $lightgray_color;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__cross {
+    font-size: $font_size_h3;
+  }
+
+  &__body {
+    padding: $padding_medium;
+
+    &--post {
+      
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__footer {
+    padding: $padding_medium;
+    border-top: 1px solid $lightgray_color;
+  }
+
+  &--post {
+    width: $padding_big * 20;
+    transform: translate(-50%, 0);
+    top: 120px;    
+    overflow-y: auto;
+    max-height: calc(100vh - 152px);
+  }
+}

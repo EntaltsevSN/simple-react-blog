@@ -1,0 +1,19 @@
+.thread {
+  &__messages {
+    border-top: 2px solid $primary_color_orange;
+    margin-top: $padding_medium;
+  }
+
+  &__message {
+    padding: $padding_medium 0;
+    border-bottom: 2px solid $primary_color_orange;
+  }
+
+  &__author {
+    font-size: ($font_size_h3 + $font_size_h4) / 2;
+  }
+
+  &__text {
+    margin-bottom: 0;
+  }
+}

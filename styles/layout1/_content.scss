@@ -1,0 +1,22 @@
+.content {
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+  flex-grow: 1;
+
+  &__header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $padding_big;
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__slider {
+    margin-bottom: $padding_big * 1.5;
+  }
+}

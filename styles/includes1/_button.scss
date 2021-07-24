@@ -1,0 +1,145 @@
+.button {
+  display: inline-block;
+  border: 0;
+  background-color: transparent;
+  background-image: none;
+  outline: none;
+  cursor: pointer;
+  padding: ($padding_small / 1.5) $padding_medium;
+  background-color: $primary_color_darkblue;
+  color: #fff;
+  text-decoration: none;
+  border-radius: $border_radius;
+  font-family: 'Rubik', sans-serif;
+  font-size: $font_size;
+
+  [class*=fa] {
+    font-size: 24px;
+
+    &[viewbox] {
+      height: 24px;
+    }
+  }
+
+  &,
+  &:active,
+  &:visited,
+  &:hover {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: darken($primary_color_darkblue, 10%);
+  }
+
+  &--apd {
+    background-color: $primary_color_green;
+
+    &:hover {
+      background-color: darken($primary_color_green, 10%);
+    }
+  }
+
+  &--flr {
+    background-color: $primary_color_red;
+
+    &:hover {
+      background-color: darken($primary_color_red, 10%);
+    }
+  }
+
+  &--small {
+    font-size: 14px;
+    padding: ($padding_small / 2) ($padding_medium / 1.5);
+    border-radius: $padding_small / 4;
+  }
+
+  &--static {
+    background-color: $primary_color_blue;
+  }
+
+  &--success {
+    background-color: $primary_color_green;
+  }
+
+  &--warning {
+    background-color: $primary_color_yellow;
+  }
+
+  &--danger {
+    background-color: $primary_color_red;
+  }
+
+  &--link {
+    background-color: transparent;
+    padding: 0;
+    display: inline;
+    color: $text_color;
+    text-decoration: underline;
+
+    &:hover {
+      color: lighten($text_color, 20%);
+      text-decoration: none;
+      background-color: transparent;
+    }
+  }
+
+  &--active {
+    &,
+    &:hover,
+    &:active,
+    &:visited {
+      background-color: $body_color;
+      color: $text_color;
+    }
+  }
+
+  &--margin-top {
+    margin-top: $padding_small;
+  }
+
+  &--margin-right {
+    margin-right: $padding_small / 2;
+  } 
+  
+  &--margin-right-big {
+    margin-right: $padding_small;
+  } 
+
+  &--margin-left {
+    margin-left: $padding_small;
+  }
+
+  &--bordered {
+    border: 1px solid $primary_color_darkblue;
+    background-color: transparent;
+    color: $primary_color_darkblue;
+
+    &:hover {
+      color: lighten($primary_color_darkblue, 20%);
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    &,
+    &:active,
+    &:visited,
+    &:hover {
+      color: $primary_color_darkblue;
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--cart {
+    padding: ($padding_small / 2) ($padding_small / 1.5);
+    line-height: 1;
+  }
+  
+  &[disabled] {
+    pointer-events: none;
+    opacity: .5;
+  }
+}

@@ -1,0 +1,24 @@
+.home {
+  padding: $padding_big 0;
+  background-color: #fff;
+
+  &__welcome {
+    border: 4px solid $primary_color_green;
+    padding: $padding_medium;
+    border-radius: $border_radius;
+    margin-bottom: $padding_medium;
+  }
+
+  &__column {
+    svg {
+      min-width: 20px;
+      margin-right: $padding_small / 2;
+      position: relative;
+      top: 4px;
+    }
+
+    p {
+      display: flex;
+    }
+  }
+}

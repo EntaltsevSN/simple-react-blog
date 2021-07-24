@@ -1,0 +1,42 @@
+.comments {
+  &__title {
+    margin-bottom: $padding_small / 2;
+  }
+
+  &__data {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    padding-bottom: $padding_medium;
+    border-bottom: 1px solid $lightgray_color;
+    margin-bottom: $padding_medium;
+  }
+
+  &__tree {
+    margin-left: $padding_medium * 2;
+  }
+
+  &__avatar {
+    width: $padding_medium * 2;
+    box-shadow: $box_shadow, $box_shadow;
+    border-radius: 50%;
+    height: auto;
+    margin-right: $padding_medium;
+  }
+
+  &__body {
+    margin-bottom: $padding_small;
+  }
+
+  &__meta {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__option,
+  &__reply {
+    font-size: $font_size - 2;
+    color: lighten($text_color, 30%);
+    margin-right: $padding_small;
+  }
+}

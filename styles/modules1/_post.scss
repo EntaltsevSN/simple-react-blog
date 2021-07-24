@@ -1,0 +1,39 @@
+.post {
+  @extend .box;
+  padding: $padding_medium;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    font-size: $padding_small;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: $font_size - 2px;
+    color: $gray_color;
+  }
+
+  &__copied {
+    color: $black_color;
+    margin-right: $padding_medium;
+  }
+
+  &__copier {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__image {
+    margin-bottom: $padding_medium;
+  }
+
+  &__description {
+    padding-bottom: $padding_medium;
+    border-bottom: 2px solid $lightgray_color;
+  }
+}

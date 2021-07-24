@@ -1,0 +1,41 @@
+.forum {
+  padding: $padding_big 0;
+  background-color: #fff;
+
+  &__thread {
+    border-bottom: 2px solid $primary_color_orange;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  &__section {
+    padding: $padding_small 0;
+
+    &--icon {
+      max-width: 72px;
+    }
+
+    &--info {
+      flex-grow: 1;
+    }
+
+    &--count {
+      min-width: 80px;
+      text-align: center;
+    }
+  }
+
+  &__name {
+    margin-bottom: $padding_small / 2;
+    font-size: ($font_size_h3 + $font_size_h4) / 2;
+  }
+
+  &__subname {
+    margin-bottom: 0;
+  }
+
+  &__count {
+    margin-bottom: 0;
+  }
+}

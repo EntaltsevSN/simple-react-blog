@@ -1,0 +1,12 @@
+.projects {
+  &__filters {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: $padding_big;
+    align-items: center;
+
+    .form__group {
+      margin: 0 $padding_small 0 0;
+    }
+  }
+}

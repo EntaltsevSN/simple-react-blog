@@ -1,0 +1,20 @@
+.sections {
+  padding: $padding_big 0 0;
+  background-color: #fff;
+
+  &__section {
+    position: relative;
+    border: 4px solid $primary_color_purple;
+    border-radius: $border_radius * 2;
+    padding: $padding_medium $padding_medium 0;
+    height: 100%;
+  }
+
+  &__target {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

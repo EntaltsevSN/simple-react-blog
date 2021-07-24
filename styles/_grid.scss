@@ -1,0 +1,121 @@
+$spacer: $padding_small;
+
+$media_breakpoints: (
+  "xs": 480,
+  "sm": 768,
+  "md": 992,
+  "lg": 1200
+);
+
+@mixin media($media) {
+  @each $code, $breakpoint in $media_breakpoints {
+    @if (str-index($media, $code)) {
+      @media only screen and (min-width: $breakpoint + 'px') { @content }
+    }
+  }
+}
+
+// Grid styles
+$fluid_variants: 2, 3, 4, 6;
+
+$fluid_types: (
+  'xs': 1,
+  'sm': 2,
+  'md': 3,
+  'lg': 4
+);
+
+.row {
+  margin-left: -$spacer;
+  margin-right: -$spacer;
+  display: flex;
+  flex-flow: row wrap;
+
+  @each $variant in $fluid_variants {
+    @each $code, $count in $fluid_types {
+      &.row--fluid-#{$variant} {
+        .column {
+          @include media($code) {
+            @if $variant == 3 {
+              @if $count != 4 {
+                flex: 1 0 (100% / $count);
+
+                &--fixed {
+                  width: (100% / count);
+                }
+              }
+            } @else if $variant == 2 {
+              @if $count != 4 and $count != 3 {
+                flex: 1 0 (100% / $count);
+
+                &--fixed {
+                  width: (100% / count);
+                }
+              }
+            } @else if $variant == 6 {
+              @if $code == 'md' {
+                flex: 1 0 (100% / 4);
+
+                &--fixed {
+                  width: (100% / 4);
+                }
+              } @else if $code == 'lg' {
+                flex: 1 0 (100% / 6);
+                
+                &--fixed {
+                  width: (100% / 6);
+                }
+              } @else {
+                flex: 1 0 (100% / $count);
+
+                &--fixed {
+                  width: (100% / $count);
+                }
+              }
+            } @else {
+              flex: 1 0 (100% / $count);
+
+              &--fixed {
+                width: (100% / 4);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.column {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  width: 100%;
+  min-height: 1px;
+  padding-left: $spacer;
+  padding-right: $spacer;
+}
+
+.column {
+  margin-bottom: $spacer * 2;
+  flex: 0 0 100%;
+}
+
+$columns_count: 12;
+
+@each $code, $breakpoint in $media_breakpoints {
+  @include media($code) {
+    @for $i from 1 through $columns_count {
+      .column--#{$code}-#{$i} {
+        flex: 0 0 (100% / $columns_count * $i);
+        max-width: (100% / $columns_count * $i);
+      }
+      .column--#{$code}-offset-#{$i} {
+        margin-left: (100% / $columns_count * $i);
+      } 
+      .column--#{$code}-outset-#{$i} {
+        margin-right: (100% / $columns_count * $i);
+      } 
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.management {
+  padding: $padding_medium;
+
+  &__request {
+    @extend .box;
+    padding: $padding_medium;
+    border: 1px solid $primary_color_darkblue;
+    border-radius: $border_radius;
+    margin-bottom: $padding_medium;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: $padding_small / 2;
+  }
+
+  &__flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    margin-left: $padding_small;
+  }
+}

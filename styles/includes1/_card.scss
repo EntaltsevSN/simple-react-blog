@@ -1,0 +1,90 @@
+.card {
+  @extend .box;
+  overflow: hidden;
+  position: relative;
+
+  &--gray {
+    background-color: $body_color;    
+  }
+
+  &--sidebar {
+    height: auto;
+    background-color: $body_color;
+    transform: scale(1) !important;
+    box-shadow: $box_shadow, $box_shadow;
+
+    &:hover {
+      transform: scale(1) !important;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    padding: $padding_medium $padding_medium 0;
+  }
+
+  &__meta {
+    margin-bottom: $padding_small;
+    letter-spacing: .5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: $font_size - 2;
+  }
+
+  &__title,
+  &__description {
+    margin-bottom: $padding_small;
+
+    &--no-margin {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text-between {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $padding_small;
+
+    &--small {
+      font-size: $font-size - 2;
+    }
+  }
+
+  &__text {
+    margin-bottom: 0;
+  }
+
+  &__path {
+    border-radius: $padding_small / 2;
+    width: 100%;
+    height: $padding_small;
+    background-color: $lightgray_color;
+    margin-bottom: $padding_medium / 2;
+  }
+
+  &__current-path {
+    background-color: $primary_color_green;
+    border-radius: $padding_small / 2;
+    height: 100%;
+  }
+
+  &__price {
+    padding: ($padding_small / 3) ($padding_small / 1.5);
+    font-weight: 700;
+    font-size: $font_size;
+    color: $primary_color_green;
+    background-color: #fff;
+    border-radius: $border_radius;
+    display: inline-block;
+    margin-bottom: $padding_small;
+  }
+}

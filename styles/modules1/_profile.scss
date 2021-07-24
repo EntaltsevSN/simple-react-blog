@@ -1,0 +1,253 @@
+.profile {
+  display: flex;
+  flex-flow: row nowrap;
+
+  &__sidebar {
+    padding: $padding_medium;
+    border-right: 1px solid $lightgray_color;
+    min-width: $padding_medium * 9;
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    margin-bottom: $padding_medium;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: $padding_small $padding_medium;
+    background-color: $body_color;
+    //background-image: linear-gradient(135deg, $body_color 0%, $lightgray_color 100%);
+    border-radius: $border_radius;
+    text-decoration: none;
+
+    &,
+    &:visited {
+      color: $text_color;
+    }
+
+    &--active {
+      background: none;
+      pointer-events: none;
+    }
+
+    &:hover {
+      background-image: none;
+      background-color: $primary_color_darkblue;
+      color: #fff;
+    }
+  } 
+
+  &__body {
+    flex-grow: 1;
+  }
+
+  &__header {
+    padding: $padding_medium;
+    border-bottom: 1px solid $lightgray_color;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__shape {
+    margin-right: $padding_big;
+    text-align: center;
+  }
+
+  &__avatar {
+    max-width: $padding_big * 4.5;
+    border-radius: 50%;
+  }
+
+  &__info {
+    flex-grow: 1;
+  }
+
+  &__name {
+    margin-bottom: $padding_small;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__details {
+    display: flex;
+    flex-flow: row nowrap;
+    color: lighten($text_color, 50%);
+    font-weight: 400;
+    margin-bottom: $padding_small;
+  }
+
+  &__detail {
+    display: flex;
+    margin-right: $padding_medium;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: $padding_small / 3;
+    font-size: $font_size * 1.25;
+  }
+
+  &__label {
+    margin-bottom: 0;
+  }
+
+  &__stats {
+    background-color: $body_color;
+    border-bottom: 1px solid $lightgray_color;
+    //background-image: linear-gradient(135deg, $body_color 0%, $lightgray_color 100%);
+    padding: $padding_medium;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__stat {
+    padding-right: $padding_big * 3;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  &__property {
+    margin-bottom: $padding_small / 4;
+  }
+
+  &__value {
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  &__data {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__section {
+    width: 50%;
+    border-right: 1px solid $lightgray_color;
+    padding: $padding_medium;
+
+    &:last-of-type {
+      border-right: 0;
+    }
+  }
+
+  &__block {
+    margin-bottom: $padding_small;
+  }
+
+  &__table {
+    padding: $padding_medium;
+  }
+
+  &__role {
+    padding: ($padding_small / 4) ($padding_small / 2);
+    margin-right: $padding_small;
+    border-radius: $border_radius;
+    color: #fff;
+
+    &--user {
+      background-color: $primary_color_darkblue;
+    }
+    
+    &--creator {
+      background-color: $primary_color_red;
+    }
+    
+    &--manager {
+      background-color: $primary_color_yellow;
+      color: $text_color;
+    }
+    
+    &--moderator {
+      background-color: $primary_color_green;
+    }
+    
+    &--admin {
+      background-color: $primary_color_blue;
+    }
+  }
+
+  &__projects {
+    padding: $padding_medium;
+  }
+
+  &__topbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__creator {
+    padding: $padding_medium;
+    border-radius: $border_radius;
+    border: 1px solid $lightgray_color;
+    background-color: lighten($primary_color_red, 40%);
+    margin-top: $padding_medium;
+    margin-bottom: $padding_medium;
+
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button {
+    margin-right: $padding_medium;
+
+    &:not([class*='active']) {
+      @extend .button--link
+    }
+
+    &--active {
+      &,
+      &:hover,
+      &:active,
+      &:visited {
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__tab {
+    margin-top: $padding_medium;
+  }
+
+  &__card {
+    @extend .box;
+    border-radius: $border_radius;
+    overflow: hidden;
+  }
+
+  &__meta {
+    padding: $padding_medium;
+    background-color: $body_color;
+  }
+
+  &__title {
+    &--no-margin {
+      margin-bottom: 0;
+    }
+  }
+
+  &__moderator {
+    padding: $padding_medium;
+  }
+
+  &__nav {
+    margin-bottom: $padding_medium;
+  }
+}

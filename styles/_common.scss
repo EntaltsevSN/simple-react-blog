@@ -1,0 +1,114 @@
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: $font_size;
+  font-family: $font_family;
+  line-height: 1.5;
+  color: $text_color;
+  background-color: $body_color;
+}
+
+#app {
+  height: 100%;
+}
+
+h1 {
+  font-size: $font_size_h1;
+}
+
+h2 {
+  font-size: $font_size_h2;
+}
+
+h3 {
+  font-size: $font_size_h3;
+}
+
+h4 {
+  font-size: $font_size_h4;
+}
+
+h5 {
+  font-size: $font_size_h5;
+}
+
+h6 {
+  font-size: $font_size_h6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 $padding_medium;
+  font-weight: 600;
+}
+
+a {
+  &,
+  &:active,
+  &:visited {
+    color: $primary_color_purple;
+  }
+
+  &:hover {
+    color: $text_color;
+    text-decoration: none;
+  }
+}
+
+[dir=ltr] .ck.ck-dropdown .ck-dropdown__arrow {
+  z-index: 0;
+}
+
+p,
+ul {
+  margin: 0 0 $padding_medium;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.hidden-text {
+  visibility: hidden;
+}
+
+.react-datepicker-popper {
+  z-index: 10;
+}
+
+.no-access {
+  //@extend .box;
+  padding: $padding_medium;
+}
+
+.error {
+  border: 2px solid $primary_color_red;
+  padding: $padding_small;
+  color: $primary_color_red;
+  margin-bottom: 0;
+  margin-top: $padding_medium;
+}
+
+.tree-svg {
+  margin-right: $padding_medium;
+}

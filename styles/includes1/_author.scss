@@ -1,0 +1,58 @@
+.author {
+  display: flex;
+  flex-flow: row nowrap;
+  text-decoration: none;
+  align-items: center;
+  margin-bottom: $padding_small;
+  margin-left: 0;
+  padding: $padding_small;
+  transition: all ease-out .2s;
+
+  &:hover {
+    background-color: $body_color;
+    border-radius: $padding_small / 2;
+  }
+
+  &__avatar {
+    height: $padding_big * 2;
+    width: auto;
+    margin-right: $padding_small;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-weight: $strong_weight;
+    margin-bottom: $padding_small / 4;
+    color: $text_color;
+  }
+
+  &__status {
+    margin-bottom: 0;
+  }
+
+  &__role {
+    margin-top: $padding_small / 4;
+    color: $text_color;
+    display: inline-block;
+    padding: ($padding_small / 4) ($padding_small / 2);
+    border: 2px solid $text_color;
+    border-radius: $border_radius;
+    font-size: $font_size - 2;
+
+    &--creator {
+      border-color: $primary_color_red;
+    }
+
+    &--manager {
+      border-color: $primary_color_yellow;
+    }
+
+    &--moderator {
+      border-color: $primary_color_green;
+    }
+
+    &--admin {
+      border-color: $primary_color_blue;
+    }
+  }
+}

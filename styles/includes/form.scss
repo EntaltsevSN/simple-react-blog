@@ -1,0 +1,12 @@
+.form {
+  &__section {
+    margin-bottom: $padding_medium;
+  }
+
+  &__input {
+    border: 2px solid $lightgray_color;
+    padding: $padding_small / 2;
+    border-radius: $border-radius;
+    width: 100%;
+  }
+}

@@ -1,0 +1,43 @@
+.box {
+  width: 100%;
+  box-shadow: $box_shadow;
+  border-radius: $border_radius;
+  background-color: #fff;
+  margin-bottom: $padding_medium;
+
+  &--slide {
+    max-width: ($container_width - ($padding_big * 2));
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 !important;
+
+    img {
+      max-width: 100%;
+    }
+
+    .project__stats {
+      padding: $padding_small $padding_big;
+      text-align: center;
+    }
+  }
+
+  &--padding {
+    padding: $padding_medium;
+  }
+
+  &__description {
+    margin-bottom: $padding_medium;
+  }
+
+  &.card {
+    height: 100%;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+      transform: scale(1.075);
+      z-index: 1;
+      box-shadow: $box_shadow, $box_shadow, $box_shadow;
+      transition: all ease-in-out .2s;
+    }
+  }
+}

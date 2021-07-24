@@ -1,0 +1,43 @@
+@keyframes loader-box {
+  0% {
+    height: 3px;
+  }
+  50% {
+    height: 78px;
+  }
+  100% {
+    font-size: 3px;
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: space-between;
+  width: 38px;
+  height: 78px;
+  
+  &__box {
+    width: 8px;
+    height: 3px;
+    animation: loader-box 2s infinite;
+    
+    &--blue {
+      background-color: #3498DB;
+      animation-delay: .2s;
+    }
+    
+    &--red {
+      background-color: #E74D3D;
+      animation-delay: .6s;
+    }
+    
+    &--yellow {
+      background-color: #F1C40F;
+    }
+    
+    &--green {
+      background-color: #1ABC9C;
+      animation-delay: .3s;
+    }
+  }
+}

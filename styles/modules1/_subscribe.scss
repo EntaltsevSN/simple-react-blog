@@ -1,0 +1,24 @@
+.subscribe {
+  padding: $padding_big;
+  text-align: center;
+
+  &__controls {
+    margin-bottom: $padding_medium;
+  }
+
+  &__social {
+    max-width: $padding_big * 5;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  &__link {
+    font-size: $font_size * 2;
+
+    svg {
+      fill: $text_color;
+    }
+  }
+}

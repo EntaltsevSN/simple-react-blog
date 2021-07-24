@@ -1,0 +1,21 @@
+.badge {
+  font-size: $font_size - 1;
+  font-weight: 600;
+  padding: ($padding_small / 4) ($padding_small / 2);
+  border-radius: $border_radius;
+
+  &--hobbyworld {
+    background-color: #fcc04d;
+    color: $text_color;
+  }
+
+  &--hobbygames {
+    background-color: #faa71a;
+    color: $text_color;
+  }
+
+  &--crowdrepublic {
+    background-color: $primary_color_darkblue;
+    color: #fff;
+  }
+}

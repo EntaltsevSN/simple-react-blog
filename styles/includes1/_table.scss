@@ -1,0 +1,23 @@
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+
+  &--top-margin {
+    margin-top: $padding_big;
+  }
+
+  &__row {
+    display: table-row;
+    border-bottom: 1px solid $lightgray_color;
+
+    &--head {
+      background-color: $body_color;
+    }
+  }
+
+  &__column {
+    display: table-cell;
+    padding: $padding_small 0 $padding_small $padding_small;
+  }
+}

@@ -1,0 +1,29 @@
+.infographics {
+  background-color: $primary_color_darkblue;
+  padding: ($padding_big * 2) 0 1px;
+
+  &__item {
+    text-align: center;
+    color: #fff;
+    margin-bottom: $padding_big * 2;
+  }
+
+  &__icon {
+    margin-bottom: $padding_medium;
+    height: $padding_small * 4;
+    width: auto;
+  }
+
+  &__property {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: $strong_weight;
+    margin-bottom: $padding_small;
+  }
+
+  &__value {
+    font-size: 24px;
+    font-weight: $strong_weight;
+  }
+}

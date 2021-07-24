@@ -1,0 +1,58 @@
+.popup {
+  position: fixed;
+  top: 16px;
+  right: 32px;
+  width: $padding_big * 10;
+  height: 100%;
+  padding: $padding_small;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 120;
+
+  &__transition {
+    &-enter {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    &-enter-active {
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 300ms, transform 300ms;
+    }
+
+    &-exit {
+      opacity: 1;
+    }
+
+    &-exit-active {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 300ms, transform 300ms;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: $padding_small $padding_medium;
+    box-shadow: $box_shadow, $box_shadow, $box_shadow;
+    line-height: 1.25;
+  }
+
+  &__icon {
+    fill: $primary_color_green;
+    font-size: $padding_big;
+  }
+
+  &__body {
+    margin-left: $padding_small;
+    flex-grow: 1;
+  }
+
+  &__text {
+    margin-bottom: 0;
+  }
+}

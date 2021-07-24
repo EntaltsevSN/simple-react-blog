@@ -1,0 +1,325 @@
+.wizard {
+  @extend .box;
+  display: flex;
+  flex-flow: row nowrap;
+
+  &__sidebar {
+    border-right: 1px solid $lightgray_color;
+    min-width: $padding_big * 10;
+  }
+
+  &__back {
+    border-bottom: 1px solid $lightgray_color;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: $padding_medium;
+    text-decoration: none;
+
+    span {
+      display: inline-block;
+      margin-left: $padding_small;
+    }
+  }
+
+  &__list {
+    padding: $padding_medium;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: $padding_medium;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__block {
+    position: relative;
+    padding: $padding_small;
+    border-radius: $border_radius;
+    box-shadow: none;
+    transition: all ease-out .3s;
+
+    &:hover {
+      box-shadow: 0 3px 5px rgba(0,0,0,0.16), 0 3px 5px rgba(0,0,0,0.23);
+      transition: all ease-out .3s;
+    }
+
+    &--active {
+      box-shadow: 0 3px 5px rgba(0,0,0,0.16), 0 3px 5px rgba(0,0,0,0.23);
+    }
+
+    &--new {
+      border: 1px solid $lightgray_color;
+      background-image: linear-gradient(135deg, #fff 0%, $body_color 100%);
+    }
+
+    &--apg{
+      background-color: lighten($primary_color_yellow, 35%);
+      
+    }
+
+    &--scd {
+      background-image: linear-gradient(135deg, lighten($primary_color_yellow, 35%) 0%, lighten($primary_color_yellow, 20%) 100%);
+    }
+
+    &--apd {
+      background-color: lighten($primary_color_green, 35%);
+    }
+
+    &--scs {
+      background-image: linear-gradient(135deg, lighten($primary_color_green, 50%) 0%, lighten($primary_color_green, 15%) 100%);
+    }
+
+    &--fnd {
+      background-color: lighten($primary_color_blue, 35%);
+    }
+
+    &--chn {
+      background-image: linear-gradient(135deg, lighten($primary_color_blue, 35%) 0%, lighten($primary_color_blue, 20%) 100%);
+    }
+
+    &--rjd {
+      background-color: lighten($primary_color_red, 35%);
+    }
+
+    &--flr {
+      background-image: linear-gradient(135deg, lighten($primary_color_red, 35%) 0%, lighten($primary_color_red, 20%) 100%);
+    }
+
+    &--prd {
+      background-image: linear-gradient(135deg, lighten($primary_color_yellow, 35%) 0%, lighten($primary_color_green, 20%) 100%);
+    }
+
+    &--pbl {
+      background-image: linear-gradient(135deg, lighten($primary_color_blue, 30%) 0%, lighten($primary_color_green, 20%) 100%);
+    }
+  }
+
+  &__redirect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__project {
+    padding: $padding_medium;
+  }
+
+  &__header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: $padding_small;
+
+    [class*=title] {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    &--section {
+      margin-bottom: $padding_small / 2;
+    }
+
+    &--small {
+      word-wrap: break-word;
+    }
+  }
+
+  &__sections {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    border: 1px solid $primary_color_blue;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: $padding_medium;
+    border-radius: $border_radius;
+    transition: all ease-out .3s;
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: 0 3px 5px rgba(0,0,0,0.16), 0 3px 5px rgba(0,0,0,0.23);
+      transition: all ease-out .3s;
+    }
+
+    &[disabled] {
+      pointer-events: none;
+      opacity: .5;
+      background-color: $body_color;
+    }
+  }
+
+  &__icon {
+    font-size: $font_size_h2;
+    fill: $primary_color_blue;
+    margin-right: $padding_medium;
+
+    &--small {
+      font-size: ($font_size_h3 + $font_size_h2) / 2;
+      margin-right: 0;
+      margin-left: $padding_small;
+    }
+  }
+
+  &__form {
+    padding: $padding_medium;
+  }
+
+  &__article {
+    padding: $padding_medium $padding_medium 0;
+    border: 1px solid $lightgray_color;
+    border-radius: $border_radius;
+    margin-bottom: $padding_medium;
+    box-shadow: none;
+    transition: all ease-out .3s;
+
+    &:hover {
+      border-color: $primary_color_blue;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.16), 0 3px 5px rgba(0,0,0,0.23);
+      transition: all ease-out .3s;
+    }
+  }
+
+  &__quote {
+    border-left: 5px solid $lightgray_color;
+    padding: $padding_small;
+    background-color: $body_color;
+    font-style: italic;
+    color: lighten($text_color, 24%);
+
+    &--inline {
+      border: 0;
+      background: none;
+      padding: 0;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: $padding_small / 2;
+    align-items: flex-start;
+  }
+
+  &__part {
+    flex-grow: 1;
+  }
+
+  &__image {
+    border-radius: $border_radius;
+
+    &--part {
+      max-width: $padding_medium * 11;
+      margin-right: $padding_medium;
+    }
+  }
+
+  &__html {
+    margin-bottom: $padding_small / 2;
+  }
+
+  &__text {
+    margin-bottom: $padding_medium / 2;
+
+    &--last {
+      margin-bottom: 0;
+    }
+  }
+
+  &__stage {
+    border: 1px solid $lightgray_color;
+    padding: $padding_medium;
+    border-radius: $border_radius;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    &--success {
+      border-color: $primary_color_green;
+    }
+
+    &--pending {
+      border-color: $primary_color_blue;
+    }
+
+    &--failure {
+      border-color: $primary_color_red;
+    }
+
+    &--inner {
+      margin-bottom: $padding_medium;
+    }
+  }
+
+  &__button {
+    margin-left: $padding_medium;
+  }
+
+  &__alert {
+    margin-bottom: 0;
+  }
+
+  &__timer {
+    font-weight: 600;
+  }
+
+  &__comment {
+    @extend .box;
+    border: 1px solid $lightgray_color;
+    padding: $padding_medium $padding_medium 1px;
+    margin-top: $padding_medium;
+  }
+
+  &__intro {
+    padding: $padding_medium;
+  }
+
+  &__stats {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
+    background-color: $lightgray_color;
+  }
+
+  &__stat {
+    padding: $padding_medium;
+    background-color: #fff;
+  }
+
+  &__option {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: $padding_small;    
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__property {
+    font-weight: 700;
+    margin-right: $padding_small / 4;
+
+    &:after {
+      content: ':';
+    }
+  }
+}

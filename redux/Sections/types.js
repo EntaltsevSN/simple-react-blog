@@ -1,0 +1,1 @@
+export const GET_SECTIONS = 'GET_SECTIONS'

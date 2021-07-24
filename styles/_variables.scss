@@ -1,0 +1,37 @@
+$primary_color_blue: #37b6f6;
+$primary_color_orange: #f99d07;
+$primary_color_purple: #882ff6;
+$primary_color_red: #E74D3D;
+$primary_color_yellow: #F1C40F;
+$primary_color_green: #35d461;
+$primary_color_lightblue: #819FB1;
+$primary_color_darkblue: #2c3e50;
+
+$body_color: #fff;
+$text_color: #000;
+
+$black_color: #1f1f1f;
+$gray_color: #aaa;
+$lightgray_color: #e4e5e6;
+
+$font_size: 14px;
+$font_family: 'Rubik', sans-serif;
+
+$font_size_h1: $font_size * 2.5;
+$font_size_h2: $font_size * 1.9;
+$font_size_h3: $font_size * 1.4;
+$font_size_h4: $font_size * 1.1;
+$font_size_h5: $font_size * .9;
+$font_size_h6: $font_size * .75;
+
+$container_width: 1200px;
+
+$padding_big: 32px;
+$padding_medium: 24px;
+$padding_small: 16px;
+
+$strong_weight: 500;
+
+$box_shadow: rgba(0, 0, 0, 0.06) 0px 1px 3px 0px, rgba(0, 0, 0, 0.03) 0px 1px 2px 0px, rgba(0, 0, 0, 0.015) 0px 1px 2px 0px;
+$box_shadow_invert: rgba(0, 0, 0, 0.06) 0px -1px 3px 0px, rgba(0, 0, 0, 0.03) 0px -1px 2px 0px, rgba(0, 0, 0, 0.015) 0px -1px 2px 0px;
+$border_radius: $padding_small / 4;

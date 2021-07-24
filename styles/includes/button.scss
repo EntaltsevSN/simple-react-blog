@@ -1,0 +1,15 @@
+.button {
+  display: inline-block;
+  background-color: $primary_color_purple;
+  border: 0;
+  padding: ($padding_small / 1.5) $padding_small;
+  color: #fff;
+  font-size: $font_size_h4;
+  border-radius: $border_radius;
+  cursor: pointer;
+
+  &[disabled] {
+    opacity: .5;
+    cursor: auto;
+  }
+}
